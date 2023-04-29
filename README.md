@@ -1,4 +1,4 @@
-# Clear Case's Python GUI Tutorials
+# Clear Code's Python GUI Tutorials
 
 Working along with an 18-hour long [YouTube video][vid] which covers many Python
 GUI packages, starting with tkinter. Just to figure out how things work.
