@@ -13,6 +13,7 @@ Depending on the framework in question, certain packages will be installed.
 ## Organization
 
 Probably one subfolder will be used per framework, although all packages will be
-in the same virtual environment.
+in the same virtual environment. Each subfolder also has a README.md, with links
+to additional sites I found useful for that particular framework/project.
 
 [vid]: https://youtu.be/mop6g-c5HEY
