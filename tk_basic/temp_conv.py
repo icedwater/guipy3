@@ -36,6 +36,15 @@ def convert_temp():
         convertFtoC()
     elif convert_to.get() == "F":
         convertCtoF()
+def lock_celsius():
+    celsius_box.delete(0, tk.END)
+    celsius_box.configure({"state": "readonly"})
+    fahrenheit_box.configure({"state": "normal"})
+
+def lock_fahrenheit():
+    fahrenheit_box.delete(0, tk.END)
+    fahrenheit_box.configure({"state": "readonly"})
+    celsius_box.configure({"state": "normal"})
 
 # setup
 window = tk.Tk()
@@ -86,13 +95,15 @@ c_to_f = tk.Radiobutton(
         master=label_frame,
         text="C to F",
         variable=convert_to,
-        value="F")
+        value="F",
+        command=lock_fahrenheit)
 
 f_to_c = tk.Radiobutton(
         master=label_frame,
         text="F to C",
         variable=convert_to,
-        value="C")
+        value="C",
+        command=lock_celsius)
 
 c_to_f.pack(side=tk.LEFT)
 f_to_c.pack(side=tk.LEFT)
