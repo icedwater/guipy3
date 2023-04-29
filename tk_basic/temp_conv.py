@@ -18,17 +18,17 @@ def clear_all():
 
 def convertCtoF():
     try:
-        fahrenheit.set(str(int(celsius.get()) * (9 / 5) + 32))
-        print(f"From {celsius}°C: {fahrenheit}°F.")
+        _c_value = celsius.get()
+        fahrenheit.set(str(float(_c_value) * (9 / 5) + 32))
     except ValueError:
-        status_msg.set(f"{celsius.get()} is not a valid number.")
+        status_msg.set(f"{_c_value} is not a valid number.")
 
 def convertFtoC():
     try:
-        celsius.set(str((int(fahrenheit.get()) - 32) * (5 / 9)))
-        print(f"From {fahrenheit}°F: {celsius}°C.")
+        _f_value = fahrenheit.get()
+        celsius.set(str((float(_f_value) - 32) * (5 / 9)))
     except ValueError:
-        status_msg.set(f"{fahrenheit.get()} is not a valid number.")
+        status_msg.set(f"{_f_value} is not a valid number.")
 
 def convert_temp():
     print(f"{celsius.get()}, {fahrenheit.get()}, {convert_to.get()}")
