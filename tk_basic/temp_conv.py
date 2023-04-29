@@ -36,6 +36,9 @@ def convert_temp():
         convertFtoC()
     elif convert_to.get() == "F":
         convertCtoF()
+    else:
+        status_msg.set("Please select a direction to convert.")
+
 def lock_celsius():
     celsius_box.delete(0, tk.END)
     celsius_box.configure({"state": "readonly"})
@@ -136,13 +139,14 @@ button_frame.pack()
 status_frame = tk.Frame(master=window)
 
 status_msg = tk.StringVar()
+status_msg.set("Enter a value and choose the conversion direction.")
 
 status_bar = tk.Label(
         master=status_frame,
         textvariable=status_msg,
         relief=tk.SUNKEN)
 
-status_bar.pack(fill=x)
+status_bar.pack(side=tk.LEFT, fill=tk.X, expand=True)
 status_frame.pack()
 
 # run
