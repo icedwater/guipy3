@@ -33,7 +33,6 @@ def convertFtoC():
         status_msg.set(f"{_f_value} is not a valid number.")
 
 def convert_temp():
-    print(f"{celsius.get()}, {fahrenheit.get()}, {convert_to.get()}")
     if convert_to.get() == "C":
         convertFtoC()
     elif convert_to.get() == "F":
