@@ -63,11 +63,11 @@ fahrenheit = tk.StringVar()
 
 celsius_label = ttk.Label(
         master=textbox_frame,
-        text="C",
+        text="°C",
         font=DEFAULT_FONT)
 fahrenheit_label = ttk.Label(
         master=textbox_frame,
-        text="F",
+        text="°F",
         font=DEFAULT_FONT)
 
 celsius_box = tk.Entry(
@@ -80,10 +80,10 @@ fahrenheit_box = tk.Entry(
         textvariable=fahrenheit,
         font=DEFAULT_FONT)
 
-celsius_label.pack(side=tk.LEFT)
 celsius_box.pack(side=tk.LEFT)
-fahrenheit_label.pack(side=tk.LEFT)
+celsius_label.pack(side=tk.LEFT)
 fahrenheit_box.pack(side=tk.LEFT)
+fahrenheit_label.pack(side=tk.LEFT)
 textbox_frame.pack()
 
 # radio button to decide convert direction
